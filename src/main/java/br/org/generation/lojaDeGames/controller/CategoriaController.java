@@ -19,8 +19,8 @@ import br.org.generation.lojaDeGames.model.Categoria;
 import br.org.generation.lojaDeGames.repository.CategoriaRepository;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/categoria")
-@CrossOrigin("*")
 public class CategoriaController {
 
 	@Autowired
@@ -45,10 +45,10 @@ public class CategoriaController {
 
 // =============== BUSCAR CATEGORIAS PELO NOME ===============
 
-	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Categoria>> GetByNome(@PathVariable String nome) {
+	@GetMapping("/titulo/{titulo}")
+	public ResponseEntity<List<Categoria>> GetByTitulo(@PathVariable String titulo) {
 
-		return ResponseEntity.ok(categoriaRepository.findAllByNomeContainingIgnoreCase(nome));
+		return ResponseEntity.ok(categoriaRepository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
 // =============== INSERIR UMA NOVA CATEGORIA ===============

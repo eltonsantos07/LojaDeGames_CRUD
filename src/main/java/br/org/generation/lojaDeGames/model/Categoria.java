@@ -22,7 +22,7 @@ public class Categoria {
 	private long Id;
 	
 	@NotNull
-	private String nome;
+	private String titulo;
 	
 	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("categoria")
@@ -36,12 +36,12 @@ public class Categoria {
 		Id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String titulo) {
+		this.titulo = titulo;
 	}
 
 }

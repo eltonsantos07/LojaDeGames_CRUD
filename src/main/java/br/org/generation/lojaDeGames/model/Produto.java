@@ -21,7 +21,7 @@ public class Produto {
 
 	@NotNull
 	@Size(min = 3, max = 100)
-	private String titulo;
+	private String nome;
 
 	@NotNull
 	@Size(min = 2, max = 100)
@@ -45,12 +45,12 @@ public class Produto {
 		this.id = id;
 	}
 
-	public String getTitulo() {
-		return titulo;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getMarca() {
